@@ -39,3 +39,10 @@ message.channel.sendMessage("Here is some info for Image-bot", {embed: {color: 0
   }
 
 }
+
+exports.avatar = function(message, inp){
+
+
+
+
+}
