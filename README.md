@@ -11,15 +11,21 @@ We are making a discord bot made for distributing awesome discord avatars and se
 
 ***
 [Node.js version 6.0.0 or higher](https://nodejs.org/en/) is required.
+
 [Discord.js version 11](https://github.com/hydrabolt/discord.js) is required.
 ***
 
 ##### Current developers:
-- TobiasFeld22
-- Sahin14
+- Tobias#5233
+- Sanil#2634
+- Packer#0254
 
 
 
-
-#### People that are designing:
+#### Current designers
 - AJFire14#1004
+- A | Λռɗɾɇɯ#3026
+- Sanil#2634
+
+Everybody, feel free to help! if you want to help just go to the server and ask for a developer role.
+To get a designer role you must have submitted something using the link at the top.

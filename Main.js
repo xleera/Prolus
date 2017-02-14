@@ -22,5 +22,6 @@ bot.on("message", message => {
   if (!message.content.startsWith(prefix)) return;
   var inp = message.content.split(" ")
   if(inp[0] == prefix + 'ping'){commands.ping(message)}
-  if(inp[0] == prefix + 'designs'){commands.designs(message)}
+  if(inp[0] == prefix + 'designs'){commands.designs(message, inp)}
+  if(inp[0] == prefix + 'help' || inp[0] == "commands" || inp[0] == "cmds" || message.mentions.users.first() != undefined && message.mentions.users.first().id == bot.user.id){commands.help(message, inp, bot, prefix)}
 })
