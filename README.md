@@ -1,2 +1,2 @@
 # Image-bot
-an image bot for discord.
+bot for sending images
