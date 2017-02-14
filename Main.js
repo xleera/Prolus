@@ -24,12 +24,9 @@ bot.on("message", message => {
   if(inp[0] == prefix + 'ping'){commands.ping(message)}
   if(inp[0] == prefix + 'designs'){commands.designs(message, inp)}
   if(inp[0] == prefix + 'help' || inp[0] == "commands" || inp[0] == "cmds" || message.mentions.users.first() != undefined && message.mentions.users.first().id == bot.user.id){commands.help(message, inp, bot, prefix)}
-<<<<<<< HEAD
   if(inp[0] == prefix + 'avatar'){commands.avatar(message, inp, prefix, bot)}
   if(inp[0] == prefix + 'restart'){commands.restart(message, bot)}
-=======
   if(inp[0] == prefix + 'avatar'){commands.avatar(message, inp)}
   if(inp[0] == prefix + 'hub'){commands.hub(message)}
   if(inp[0] == prefix + 'invite'){commands.invite(message)}
->>>>>>> origin/Dev
 })
