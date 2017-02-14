@@ -1,3 +1,7 @@
+//
+// project owned by TobiasFeld22
+// 2017
+//
 var images = require('./images.js')
 var exports = module.exports = {}
 
