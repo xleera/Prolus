@@ -29,6 +29,13 @@ if (enabled == undefined || enabled.length == 0){
 }
 }
 
+exports.hub = function(message){
+    message.author.sendMessage({embed: {color: 0x99f2ff, title: "Hub Link", description: "Join my hub server to chat and recieve support. Remember to read the rules! https://discordapp.com/invite/YCp4p8r"}});
+}
+
+exports.invite = function(message){
+    message.author.sendmessage({embed: {color: 0x99f2ff, title: "Bot Invite Link", description: "Have me join your server for everyone there to use! https://discordapp.com/oauth2/authorize?client_id=280839097981992960&scope=bot&permissions=523360"}})
+}
 
 exports.help = function(message, inp, bot, prefix){
   if (message.guild.members.get(bot.user.id).hasPermission('EMBED_LINKS') == true){
