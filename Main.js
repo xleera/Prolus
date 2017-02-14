@@ -6,7 +6,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 var commands = require('./commands.js')
 var keys = require('../keys.js')
-var prefix = "'\'"
+var prefix = "\\"
 
 
 bot.on('ready', () => {
