@@ -69,17 +69,21 @@ exports.avatar = function(message, inp, prefix, bot){
     message.channel.sendMessage("Please specify a design | `"+prefix+"help`")
     return
   }
-  var list = images.list.map((i) => (i.name));
-  if (list.includes(inp[1]) !== true){
-    message.channel.sendMessage("Unknown design, please check if you input was correct");
-    return;
-  }
+
   var namelist = []
     images.list.forEach(function(x) {
   if (x.name == inp[1]){
     namelist.push(x)
   }
 })
+  if (namelist == undefined){
+    message.channel.sendMessage("Unknown design, please check if you input was correct | `\\help`");
+    return;
+  }else if (namelist[0].enabled == false ){
+    message.channel.sendMessage("This design is disabled | `\\help`")
+    return
+  }
+
 var letter = functions.getFirst(message.member.displayName)
 
 
