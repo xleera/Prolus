@@ -1,3 +1,4 @@
+var images = require('./images.js')
 var exports = module.exports = {}
 
 exports.ping = function(message){
@@ -8,5 +9,7 @@ exports.ping = function(message){
 })
 }
 exports.designs = function(message){
-//need to finish this.
+var imagemap = images.list.join("\n")
+
+message.channel.sendMessage("List of available designs:\n"+imagemap)
 }
