@@ -3,7 +3,7 @@ node_modules/
 #################
 ## Eclipse
 #################
-
+.eslintrc.js
 *.pydevproject
 .project
 .metadata
