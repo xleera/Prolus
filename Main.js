@@ -30,4 +30,5 @@ bot.on("message", message => {
   if(inp[0] == prefix + 'hub'){commands.hub(message)}
   if(inp[0] == prefix + 'invite'){commands.invite(message)}
   if(inp[0] == prefix + 'server'){commands.server(message, inp, prefix, bot)}
+  if(inp[0] == prefix + 'blacklist add') {commands.blacklist_add(message, inp, prefix, bot)}
 })
