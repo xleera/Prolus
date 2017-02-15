@@ -44,7 +44,7 @@ exports.help = function(message, inp, bot, prefix){
 message.channel.sendMessage("Here is some info for Image-bot", {embed: {color: 0x99f2ff, Title: "Bot help", description: "Hey, <@"+message.author.id+">\n\nI am image-bot!\nI was made to deliver you awesome avatars and server icons.\n\nLet's get started!\nMy prefix is `"+prefix+"`", fields: [{name: "Command", value: "ping\ninvite\ndesigns\navatar <design name>\nserver <design name>\nhub", inline: true}, {name: "Description", value: "Get response times.\nInvite the bot to your server.\nGet a list of designs.\nLet the bot send you an avatar\nLet the bot change your server icon.\nAn invite url for the server, \nif you are in need of support", inline: true }]}})
   }else {
     return message.channel.sendMessage(`Hey, <@${message.author.id}>\n\nI am image-bot!\nI was made to deliver your awesome avatars and server icons.\n\nLet's get started!\nMy prefix is ${prefix}\n\n**__Command__** --------------- **__Description__**\nping ---------------------- Get response time.\ninvite --------------------- Invite the bot to your server.\ndesigns ------------------- Get a list of designs.\navatar <design name> -- Let the bot send you an avatar.\nserver <design name> -- Let the bot change your server icon.\nhub ----------------------- An invite url to the support server.`)
-  }M
+  };
 
 }
 
