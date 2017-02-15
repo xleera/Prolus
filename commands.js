@@ -235,7 +235,7 @@ exports.blacklist_add = function(message, inp, prefix, bot) {
     for (i = 0; i < bl.length; i++) {
         if (bl[i] === inp[2]) return message.channel.sendMessage('You have already added this user as blacklisted.');
   }
-      if(bl) bl.push(inp[2]);
+      if(bl) {bl.push(inp[2])};
       else bl = [ inp[2] ];
       fs.writeFile('./blacklist.json', JSON.stringify(bl), 'utf8');
       console.log("Blacklisted ID"+ inp[2] +" By -> "+ message.member.displayName + "#"+ message.author.discriminator)
