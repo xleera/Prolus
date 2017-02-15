@@ -229,7 +229,6 @@ exports.blacklist_add = function(message, inp, prefix, bot) {
      }
 var content = fs.readFileSync("./blacklist.json");
 var jcontent = JSON.parse(content);
-console.log(typeof jcontent)
 if (jcontent.includes(inp[2]) == true){message.channel.sendMessage("User is already blacklisted"); return};
 
 jcontent.push(inp[2]);
