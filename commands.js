@@ -219,16 +219,16 @@ message.channel.sendMessage("", {embed: {color: 0x99f2ff, title: "Image-bot Term
 //End server command
 //Start blacklist_add command
 exports.blacklist_add = function(message, inp, prefix, bot) {
-  if (inp[1] == null){
+  if (inp[2] == null){
     message.channel.sendMessage("Please specify a design | `"+prefix+"help`")
     return
   }
   if(bot.guilds.get("281063784569765889").members.get(message.author.id) != undefined ){
     if (bot.guilds.get("281063784569765889").members.get(message.author.id).roles.get("281063950001504256") != null ){
-      if(bl)  bl.push(inp[1]);
-      else bl = [ inp[1] ];
+      if(bl)  bl.push(inp[2]);
+      else bl = [ inp[2] ];
       fs.writeFile('./blacklist.json', JSON.stringify(bl), 'utf8');
-      console.log("Blacklisted ID"+ inp[1] +" By -> "+ message.member.displayName + "#"+ message.author.discriminator)
+      console.log("Blacklisted ID"+ inp[2] +" By -> "+ message.member.displayName + "#"+ message.author.discriminator)
       message.channel.sendMessage(`Successfully Blacklisted \`<@${inp[1]}>\``)
 
   }else{
