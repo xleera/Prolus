@@ -11,6 +11,7 @@ var prefix = "\\"
 
 bot.on('ready', () => {
 console.log(`Bot ready, starting in ${bot.guilds.size} servers`)
+bot.guilds.get("281063784569765889").channels.get("281441743130460161").sendMessage("", {embed: {color: 0x99f2ff, title: "Bot restarted", description: "Bot had to restart", timestamp: bot.readyAt}})
 })
 
 
