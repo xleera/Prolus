@@ -12,6 +12,7 @@ var prefix = "\\"
 bot.on('ready', () => {
 console.log(`Bot ready, starting in ${bot.guilds.size} servers`)
 bot.guilds.get("281063784569765889").channels.get("281441743130460161").sendMessage("", {embed: {color: 0x99f2ff, title: "Bot restarted", description: "Bot had to restart", timestamp: bot.readyAt}});
+bot.user.setGame('with awesome avatars!')
 })
 
 
@@ -33,4 +34,5 @@ bot.on("message", message => {
   if(inp[0] == prefix + 'blacklist') {
     if (inp[1] == "add"){commands.blacklist_add(message, inp, prefix, bot)}
   }
+  if(inp[0] == prefix + 'submit'){commands.submit(message)}
 })

@@ -253,11 +253,6 @@ module.exports = {
             "error",
             "never"
         ],
-        "template-tag-spacing": "error",
-        "unicode-bom": [
-            "error",
-            "never"
-        ],
         "valid-jsdoc": "error",
         "vars-on-top": "off",
         "wrap-iife": "error",

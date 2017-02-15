@@ -41,16 +41,16 @@ exports.hub = function(message){
 //end hub command
 //start invite command
 exports.invite = function(message){
-    message.author.sendMessage("", {embed: {color: 0x99f2ff, title: "Bot Invite Link", description: "Have me join your server for everyone there to use! https://discordapp.com/oauth2/authorize?client_id=280839097981992960&scope=bot&permissions=523360"}});
+    message.author.sendMessage("", {embed: {color: 0x99f2ff, title: "Bot Invite Link", description: "Have me join your server for everyone there to use! http://bit.ly/Prolus-bot-oauth"}});
     message.channel.sendMessage(":postbox: Sent an invite url to your direct messages.")
 }
 //end invite command
 //start help command
 exports.help = function(message, inp, bot, prefix){
   if (message.guild.members.get(bot.user.id).hasPermission('EMBED_LINKS') == true){
-message.channel.sendMessage("Here is some info for Image-bot", {embed: {color: 0x99f2ff, title: "Bot help", description: "Hey, <@"+message.author.id+">\n\nI am image-bot!\nI was made to deliver you awesome avatars and server icons.\n\nLet's get started!\nMy prefix is `"+prefix+"`", fields: [{name: "Command", value: "ping\ninvite\ndesigns\navatar <design name>\nserver <design name>\nhub", inline: true}, {name: "Description", value: "Get response times.\nInvite the bot to your server.\nGet a list of designs.\nLet the bot send you an avatar\nLet the bot change your server icon.\nAn invite url for the server, \nif you are in need of support", inline: true }]}})
+message.channel.sendMessage("Here is some info for Image-bot", {embed: {color: 0x99f2ff, title: "Bot help", description: "Hey, <@"+message.author.id+">\n\nI am Prolus!\nI was made to deliver you awesome avatars and server icons.\n\nLet's get started!\nMy prefix is `"+prefix+"`", fields: [{name: "Command", value: "ping\ninvite\ndesigns\navatar <design name>\nserver <design name>\nhub\nsubmit", inline: true}, {name: "Description", value: "Get response times.\nInvite the bot to your server.\nGet a list of designs.\nLet the bot send you an avatar\nLet the bot change your server icon.\nAn invite url to the support server. \nGet the link to submit images to Prolus.", inline: true }]}})
   }else {
-    return message.channel.sendMessage(`Hey, <@${message.author.id}>\n\nI am image-bot!\nI was made to deliver your awesome avatars and server icons.\n\nLet's get started!\nMy prefix is ${prefix}\n\n**__Command__** --------------- **__Description__**\nping ---------------------- Get response time.\ninvite --------------------- Invite the bot to your server.\ndesigns ------------------- Get a list of designs.\navatar <design name> -- Let the bot send you an avatar.\nserver <design name> -- Let the bot change your server icon.\nhub ----------------------- An invite url to the support server.`)
+    return message.channel.sendMessage(`Hey, <@${message.author.id}>\n\nI am Prolus!\nI was made to deliver your awesome avatars and server icons.\n\nLet's get started!\nMy prefix is ${prefix}\n\n**__Command__** --------------- **__Description__**\nping ---------------------- Get response time.\ninvite --------------------- Invite the bot to your server.\ndesigns ------------------- Get a list of designs.\navatar <design name> -- Let the bot send you an avatar.\nserver <design name> -- Let the bot change your server icon.\nhub ----------------------- An invite url to the support server.\nsubmit -------------------- Get the link to submit images to Prolus.`)
   }
 }
 //end help commmand
@@ -247,3 +247,12 @@ var scontent = JSON.stringify(jcontent)
 
 }
 //end Blacklist command
+//Start Submit command
+exports.submit = function(message){
+    if (message.guild.members.get(bot.user.id).hasPermission('EMBED_LINKS') == true){
+      message.channel.sendMessage({embed: {color: 0x99f2ff, title: "Image Submission", description: "Are you handy with manipulating images? Do you want to have your templates show up in Prolus? If so, fill out the submission form at http://bit.ly/Prolus-Image-Submit"}})
+    }else{
+      message.channel.sendMessage(`Are you handy with manipulating images? Do you want to have your templates show up in Prolus? If so, fill out the submission form at http://bit.ly/Prolus-Image-Submit`)
+    }
+}
+//End Submit command
