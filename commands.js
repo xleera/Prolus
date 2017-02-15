@@ -34,7 +34,7 @@ exports.hub = function(message){
 }
 
 exports.invite = function(message){
-    message.author.sendmessage({embed: {color: 0x99f2ff, title: "Bot Invite Link", description: "Have me join your server for everyone there to use! https://discordapp.com/oauth2/authorize?client_id=280839097981992960&scope=bot&permissions=523360"}})
+    message.author.sendmessage({embed: {color: 0x99f2ff, title: "Bot Invite Link", description: "Have me join your server for everyone there to use! https://discordapp.com/oauth2/authorize?client_id=280839097981992960&scope=bot&permissions=523360"}});
 }
 
 exports.help = function(message, inp, bot, prefix){
@@ -116,7 +116,7 @@ message.author.sendMessage("", {embed: {color: 0x99f2ff, title: "Image-bot Terms
      if (m.content == "accept"){
 message.author.sendFile(namelist[0].location + letter + ".png", message.member.displayName+".png", "Here is your avatar!")
      }else{
-       message.channel.sendMessage("Cancelled")
+       message.author.sendMessage("Cancelled")
      }
    })
 })
