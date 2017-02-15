@@ -14,7 +14,7 @@ exports.list = [
 
  {
    name: "Blacksun",
-   location: "./images/Blacksun",
+   location: "./images/Blacksun/",
    enabled: true,
    designer: "A | Λռɗɾɇɯ#3026"
  }
