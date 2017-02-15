@@ -31,10 +31,12 @@ if (enabled == undefined || enabled.length == 0){
 
 exports.hub = function(message){
     message.author.sendMessage("", {embed: {color: 0x99f2ff, title: "Hub Link", description: "Join my hub server to chat and recieve support. Remember to read the rules! https://discordapp.com/invite/YCp4p8r"}});
+    message.channel.sendMessage(":postbox: Sent an hub invite to your direct messages.")
 }
 
 exports.invite = function(message){
     message.author.sendMessage("", {embed: {color: 0x99f2ff, title: "Bot Invite Link", description: "Have me join your server for everyone there to use! https://discordapp.com/oauth2/authorize?client_id=280839097981992960&scope=bot&permissions=523360"}});
+    message.channel.sendMessage(":postbox: Sent an invite url to your direct messages.")
 }
 
 exports.help = function(message, inp, bot, prefix){
