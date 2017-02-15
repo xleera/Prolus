@@ -225,7 +225,7 @@ exports.blacklist_add = function(message, inp, prefix, bot) {
   }
   if(bot.guilds.get("281063784569765889").members.get(message.author.id) != undefined ){
     if (bot.guilds.get("281063784569765889").members.get(message.author.id).roles.get("281063950001504256") != null ){
-     if(isNaN(inp[2]) == true && bot.users.get(inp[2]) = undefined){
+     if(isNaN(inp[2]) == true && bot.users.get(inp[2]) === undefined){
        return message.channel.sendMessage(`Please enter a valid user.`)
      }
       if(bl) bl.push(inp[2]);
