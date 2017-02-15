@@ -248,7 +248,7 @@ var scontent = JSON.stringify(jcontent)
 }
 //end Blacklist command
 //Start Submit command
-exports.submit = function(message){
+exports.submit = function(message, bot){
     if (message.guild.members.get(bot.user.id).hasPermission('EMBED_LINKS') == true){
       message.channel.sendMessage({embed: {color: 0x99f2ff, title: "Image Submission", description: "Are you handy with manipulating images? Do you want to have your templates show up in Prolus? If so, fill out the submission form at http://bit.ly/Prolus-Image-Submit"}})
     }else{
