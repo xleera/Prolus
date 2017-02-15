@@ -227,7 +227,6 @@ exports.blacklist_add = function(message, inp, prefix, bot) {
      if(isNaN(inp[2]) == true && bot.users.get(inp[2]) === undefined){
        return message.channel.sendMessage(`Please enter a valid user.`)
      }
-<<<<<<< HEAD
 var content = fs.readFileSync("./blacklist.json");
 var jcontent = JSON.parse(content);
 console.log(typeof jcontent)
@@ -236,18 +235,6 @@ if (jcontent.includes(inp[2]) == true){message.channel.sendMessage("User is alre
 jcontent.push(inp[2]);
 var scontent = JSON.stringify(jcontent)
       fs.writeFile('./blacklist.json', scontent, 'utf8');
-=======
-     if(typeof bl === 'undefined') {
-       bl = [];
-     }
-     var i;
-    for (i = 0; i < bl.length; i++) {
-        if (bl[i] === inp[2]) return message.channel.sendMessage('You have already added this user as blacklisted.');
-  }
-      if(bl) {bl.push(inp[2])};
-      else bl = [ inp[2] ];
-      fs.writeFile('./blacklist.json', JSON.stringify(bl), 'utf8');
->>>>>>> origin/Dev
       console.log("Blacklisted ID"+ inp[2] +" By -> "+ message.member.displayName + "#"+ message.author.discriminator)
       message.channel.sendMessage(`Successfully Blacklisted <@${inp[2]}>`)
 
