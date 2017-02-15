@@ -1,7 +1,6 @@
-<div align="center">
-<a href="https://discord.gg/YCp4p8r"><img src="https://discordapp.com/api/guilds/281063784569765889/embed.png" alt="Discord server" /></a>
 
-</div>
+<a href="https://discord.gg/YCp4p8r"><img src="https://discordapp.com/api/guilds/281063784569765889/embed.png" alt="Discord server" /></a> [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c4b95adc3aa84e2a88748524e8586772)](https://www.codacy.com/app/TobiasFeld22/Image-bot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=TobiasFeld22/Image-bot&amp;utm_campaign=Badge_Grade)
+
 # Image-bot
 ***
 
