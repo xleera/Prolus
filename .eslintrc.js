@@ -15,7 +15,7 @@ module.exports = {
         ],
         "array-callback-return": "error",
         "arrow-body-style": "error",
-        "arrow-parens": "off",
+        "arrow-parens": "always",
         "arrow-spacing": [
             "error",
             {
@@ -51,7 +51,7 @@ module.exports = {
         ],
         "consistent-return": "off",
         "consistent-this": "error",
-        "curly": "off",
+        "curly": "all",
         "default-case": "error",
         "dot-location": [
             "error",

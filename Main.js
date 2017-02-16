@@ -12,16 +12,16 @@ var prefix = "\\"
 bot.on('ready', () => {
 console.log(`Bot ready, starting in ${bot.guilds.size} servers`)
 bot.guilds.get("281063784569765889").channels.get("281441743130460161").sendMessage("", {embed: {color: 0x99f2ff, title: "Bot restarted", description: "Bot had to restart", timestamp: bot.readyAt}});
-bot.user.setGame('with awesome avatars!')
+bot.user.setGame(prefix +'help | Prolus')
 })
 
 
 bot.login(keys.token)
 
-bot.on("message", message => {
-  if (message.author.bot)return;
-  if (message.channel.type != "text") return;
-  if (!message.content.startsWith(prefix)) return;
+bot.on("message", (message) => {
+  if (message.author.bot){return};
+  if (message.channel.type != "text") {return};
+  if (!message.content.startsWith(prefix)) {return};
   var inp = message.content.split(" ")
   if(inp[0] == prefix + 'ping'){commands.ping(message)}
   if(inp[0] == prefix + 'designs'){commands.designs(message, inp)}

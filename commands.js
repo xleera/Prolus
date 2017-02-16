@@ -28,7 +28,7 @@ if (x.enabled == true){
 if (enabled == undefined || enabled.length == 0){
   message.channel.sendMessage("No designs are enabled.")
 }else{
-  var imagemap = enabled.map(i => ("**"+i.name+"** made by *"+i.designer+ "*"))
+  var imagemap = enabled.map((i) => ("**"+i.name+"** made by *"+i.designer+ "*"))
   message.channel.sendMessage("List of available designs:\n"+imagemap.join("\n"))
 }
 }
@@ -96,10 +96,10 @@ var letter = functions.getFirst(message.member.displayName)
 if (letter == null){
   message.channel.sendMessage("Because the first character of your name isn't alphanumeric. Please specify a letter to use(`A-Z or 0-9`)")
 var collector = message.channel.createCollector(
- m => m.author.id == message.author.id,
+ (m) => m.author.id == message.author.id,
  { maxMatches: 1 }
 );
-collector.on('message', m => {
+collector.on('message', (m) => {
 if (isAlphanumeric(m.content.toLowerCase().substring(0, 1)) == false){
   message.channel.sendMessage("Invalid token.")
   return
@@ -114,11 +114,11 @@ else{
     message.channel.sendMessage(":postbox: I have sent a message to your direct messages.")
 message.author.sendMessage("", {embed: {color: 0x99f2ff, title: "Prolus Terms", description: "By downloading and using any of the images distributed by Prolus, you acknowledge and agree that you have read and accepted these terms.\n\n1) Downloading and using an image distributed by Prolus does not give you ownership of the image. By downloading or using an image distributed by Prolus in any way, you acknowledge and agree that you do not own the image and are merely granted a license to use the images on Discord as your avatar or server icon.\n2) You agree that you will not modify our images in any way, shape or form without express written permission from the designer of the image being distributed by Prolus.\n3) You agree that you will not redistribute our images to other parties. You may refer other parties to Prolus where they can obtain their own images, however.\n\nDo you accept these terms? If so, type: accept. If not, simply do nothing."}}).then(() => {
   var collector2 = message.author.dmChannel.createCollector(
-   m => m.author.id == message.author.id,
+   (m) => m.author.id == message.author.id,
    { maxMatches: 1 }
  )
 
-   collector2.on('message', m => {
+   collector2.on('message', (m) => {
      if (m.content == "accept"){
 message.author.sendFile(namelist[0].location + letter + ".png", message.member.displayName+".png", "Here is your avatar!")
      }else{
@@ -134,7 +134,7 @@ message.author.sendFile(namelist[0].location + letter + ".png", message.member.d
      m => m.author.id == message.author.id,
      { maxMatches: 1 }
    )
-     collector2.on('message', m => {
+     collector2.on('message', (m) => {
        if (m.content == "accept"){
 message.author.sendFile(namelist[0].location + letter + ".png", "Here is your avatar")
        }else{
@@ -187,7 +187,7 @@ message.channel.sendMessage("", {embed: {color: 0x99f2ff, title: "Prolus Terms",
    m => m.author.id == message.author.id,
    { maxMatches: 1 }
  )
-   collector2.on('message', m => {
+   collector2.on('message', (m) => {
      if (m.content == "accept"){
        message.guild.setIcon(fs.readFileSync(namelist[0].location + letter + ".png"))
        .then(() => message.channel.sendMessage("I have updated your server icon :fire::ok_hand:"))
@@ -203,7 +203,7 @@ message.channel.sendMessage("", {embed: {color: 0x99f2ff, title: "Prolus Terms",
      m => m.author.id == message.author.id,
      { maxMatches: 1 }
    )
-     collector2.on('message', m => {
+     collector2.on('message', (m) => {
        if (m.content == "accept"){
          message.guild.setIcon(namelist[0].location + letter + ".png")
           .then(() => message.channel.sendMessage("I have updated your server icon :fire::ok_hand:"))
