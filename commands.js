@@ -256,3 +256,18 @@ exports.submit = function(message){
     }
 }
 //End Submit command
+//Start Eval command
+exports.eval = function(message){
+if (message.author.id = 156859037890117632 || message.author.id = 218459651098935297 || message.author.id = 179649961611231232){
+  const code = newContent.slice(newContent.search(' ') + 1);
+    if (!code.length) return message.reply('there\'s no code!');
+      try {
+          message.edit(`\`INPUT:\`\n\`\`\`\n${code}\n\`\`\`\n\`OUTPUT:\`\n\`\`\`\n${eval(code)}\n\`\`\``);
+      }catch(err) {
+          message.edit(`\`INPUT:\`\n\`\`\`\n${code}\n\`\`\`\n\`ERROR:\`\n\`\`\`\n${err}\n\`\`\``);
+      }
+}else{
+  return;
+}
+}
+//End Eval Command
