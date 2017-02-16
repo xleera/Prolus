@@ -8,7 +8,7 @@ exports.list = [
   {
    name: "Template",
    location: "./images/Template/",
-   enabled: true,
+   enabled: false,
    designer: "Tobias#5233"
  },
 
