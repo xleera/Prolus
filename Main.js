@@ -24,7 +24,7 @@ bot.on("message", (message) => {
   if (message.author.bot){return};
   if (message.channel.type != "text") {return};
   if (!message.content.startsWith(prefix)) {return};
-  if (jcontent.includes(message.author.id) == true)}{return}
+  if (jcontent.includes(message.author.id) == true){return}
   var inp = message.content.split(" ")
   if(inp[0] == prefix + 'ping'){commands.ping(message)}
   if(inp[0] == prefix + 'designs'){commands.designs(message, inp)}
