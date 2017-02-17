@@ -4,6 +4,7 @@
 //
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+var fs = require('fs')
 var commands = require('./commands.js')
 var keys = require('../keys.js')
 var prefix = "\\"
