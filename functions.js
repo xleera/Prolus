@@ -5,13 +5,16 @@
 var isAlphanumeric = require('is-alphanumeric');
 var exports = module.exports = {}
 
-exports.getFirst = function(username) {
+exports.getFirst = function(name) {
 
-if(isAlphanumeric(username) == false){
+if(isAlphanumeric(name.substring(0,1)) == false){
+  return null
+}
+else if(isNaN(name.substring(0,1)) == false){
   return null
 }
 else {
-  return username.substring(0, 1)
+  return name.substring(0, 1)
 }
 
 
