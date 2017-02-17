@@ -39,9 +39,5 @@ bot.on("message", (message) => {
     if (inp[1] == "remove"){commands.blacklist_remove(message, inp, prefix, bot)}
   }
   if(inp[0] == prefix + 'submit'){commands.submit(message, bot)}
-<<<<<<< HEAD
-})
-=======
   if(inp[0] == prefix + 'about'){commands.about(message, bot)}
 })
->>>>>>> Add about command
