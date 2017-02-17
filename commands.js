@@ -247,6 +247,43 @@ var scontent = JSON.stringify(jcontent)
 
 }
 //end Blacklist command
+//start blacklist remove command
+exports.blacklist_remove = function(message, inp, prefix, bot) {
+  if (inp[2] == null){
+    message.channel.sendMessage("Please specify a user to remove from the blacklist!")
+    return
+  }
+  if(bot.guilds.get("281063784569765889").members.get(message.author.id) != undefined ){
+    if (bot.guilds.get("281063784569765889").members.get(message.author.id).roles.get("281063950001504256") != null ){
+     if(isNaN(inp[2]) == true && bot.users.get(inp[2]) === undefined){
+       return message.channel.sendMessage(`Please enter a valid user.`)
+     }
+var content = fs.readFileSync("./blacklist.json");
+var jcontent = JSON.parse(content);
+if (jcontent.includes(inp[2]) == false){message.channel.sendMessage("User is not blacklisted"); return}
+if (jcontent.indexOf(inp[2]) > -1){
+  jcontent.splice(jcontent.indexOf(inp[2]), 1)
+  message.channel.sendMessage("removed user from the blacklist")
+  var scontent = JSON.stringify(jcontent)
+        fs.writeFile('./blacklist.json', scontent, 'utf8');
+        console.log("Removed blacklist ID: "+ inp[2] +" By -> "+ message.member.displayName + "#"+ message.author.discriminator)
+       message.channel.sendMessage(`Successfully removed <@${inp[2]}> from blacklist`)
+}
+var scontent = JSON.stringify(jcontent)
+      fs.writeFile('./blacklist.json', scontent, 'utf8');
+      console.log("Blacklisted ID"+ inp[2] +" By -> "+ message.member.displayName + "#"+ message.author.discriminator)
+      message.channel.sendMessage(`Successfully Blacklisted <@${inp[2]}>`)
+
+  }else{
+  message.channel.sendMessage(":no_entry: No access to this command.")
+  }
+  }
+  else{
+  message.channel.sendMessage(":no_entry: No access to this command.")
+  }
+
+}
+//end blacklist remove command
 //Start Submit command
 exports.submit = function(message, bot){
     if (message.guild.members.get(bot.user.id).hasPermission('EMBED_LINKS') == true){
