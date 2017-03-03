@@ -87,7 +87,11 @@ exports.avatar = function(message, inp, prefix, bot){
   if (namelist == undefined){
     message.channel.sendMessage("Unknown design, please check if you input was correct | `\\help`");
     return;
-  }else if (namelist[0].enabled == false ){
+  }else if (namelist[0].enabled == undefined){
+    message.channel.sendMessage("An error occurred, please try again.");
+    return;
+  }
+  else if (namelist[0].enabled == false ){
     message.channel.sendMessage("This design is disabled | `\\help`")
     return
   }
