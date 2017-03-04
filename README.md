@@ -12,8 +12,12 @@ We are making a discord bot made for distributing awesome discord avatars and se
 
 [Discord.js version 11](https://github.com/hydrabolt/discord.js) is required.
 ***
-# **Important!**
-When cloning or using the contents of this git, you **Don't** have permission to use any of the images we use, except for the images called Template. You can use those as long as you link back to this bot.
+# Copyright
+Please read the [MIT License](LICENSE.md), if you have more questions please come to [our server](https://discord.gg/YCp4p8r) (except it the question is: "Can i have the images" or something like that.)
+***
+# Example
+if you want to know which file should be in the package when submitting click [here](https://www.dropbox.com/s/tnectbr689825e9/Template.zip?dl=1). to submit a design click [here](https://docs.google.com/forms/d/e/1FAIpQLSfzSHE5TaXGg6Fd5HyrNcw6lNzi-ZdrXxV1r7kU-4WrIPX8MA/viewform)
+
 ***
 
 ##### Current developers:
@@ -27,7 +31,3 @@ When cloning or using the contents of this git, you **Don't** have permission to
 - AJFire14#1004
 - A | Λռɗɾɇɯ#3026
 - Sanil#2634
-
-######Everybody, feel free to help!
-If you want to help just go to the server and ask for a developer role.
-To get a designer role you must have submitted something using the link at the top.
