@@ -84,10 +84,11 @@ exports.avatar = function(message, inp, prefix, bot){
     namelist.push(x)
   }
 })
+setTimeout(function(){
   if (namelist == undefined){
     message.channel.sendMessage("Unknown design, please check if you input was correct | `\\help`");
     return;
-  }else if (namelist[0].enabled == undefined){
+  }else if (namelist[0] == undefined){
     message.channel.sendMessage("An error occurred, please try again.");
     return;
   }
@@ -95,7 +96,7 @@ exports.avatar = function(message, inp, prefix, bot){
     message.channel.sendMessage("This design is disabled | `\\help`")
     return
   }
-
+}, 3000)
 var letter = functions.getFirst(message.member.displayName)
 if (letter == null){
   message.channel.sendMessage("Because the first character of your name isn't alphanumeric. Please specify a letter to use(`A-Z`)")
