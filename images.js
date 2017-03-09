@@ -17,5 +17,11 @@ exports.list = [
    location: "../images/Blacksun/",
    enabled: true,
    designer: "A | Λռɗɾɇɯ#3026"
+ },
+ {
+   name: "Prolus",
+   location: "../images/Prolus",
+   enabled: true,
+   designer: "A | Λռɗɾɇɯ#3026"
  }
 ]
