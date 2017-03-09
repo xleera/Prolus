@@ -98,7 +98,7 @@ exports.avatar = function(message, inp, prefix, bot){
 
 var letter = functions.getFirst(message.member.displayName)
 if (letter == null){
-  message.channel.sendMessage("Because the first character of your name isn't alphanumeric. Please specify a letter to use(`A-Z or 0-9`)")
+  message.channel.sendMessage("Because the first character of your name isn't alphanumeric. Please specify a letter to use(`A-Z`)")
 var collector = message.channel.createCollector(
  (m) => m.author.id == message.author.id,
  { maxMatches: 1 }

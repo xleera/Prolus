@@ -20,7 +20,7 @@ exports.list = [
  },
  {
    name: "Prolus",
-   location: "../images/Prolus",
+   location: "../images/Prolus/",
    enabled: true,
    designer: "A | Λռɗɾɇɯ#3026"
  }
