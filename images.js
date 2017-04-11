@@ -12,6 +12,15 @@ exports.list = [
    designer: "Tobias#5233"
  },
 
+
+ {
+  name: "Bluebox",
+  location: "../images/Bluebox/",
+  enabled: true,
+  designer: "Cah#5153"
+},
+
+
  {
    name: "Blacksun",
    location: "../images/Blacksun/",
