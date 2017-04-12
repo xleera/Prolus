@@ -80,7 +80,7 @@ exports.avatar = function(message, inp, prefix, bot){
 
   var namelist = []
     images.list.forEach(function(x) {
-  if (x.name == inp[1]){
+  if (x.name == inp[1].toLowerCase()){
     namelist.push(x)
   }
 })

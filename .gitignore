@@ -19,7 +19,7 @@ local.properties
 
 # External tool builders
 .externalToolBuilders/
-
+.images
 # Locally stored "Eclipse launch configurations"
 *.launch
 
@@ -215,3 +215,6 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#Don't read images.js
+images.js

@@ -6,7 +6,7 @@ var exports = module.exports = {};
 
 exports.list = [
   {
-   name: "Template",
+   name: "template",
    location: "../images/Template/",
    enabled: false,
    designer: "Tobias#5233"
@@ -14,7 +14,7 @@ exports.list = [
 
 
  {
-  name: "Bluebox",
+  name: "bluebox",
   location: "../images/Bluebox/",
   enabled: true,
   designer: "Cah#5153"
@@ -22,13 +22,13 @@ exports.list = [
 
 
  {
-   name: "Blacksun",
+   name: "blacksun",
    location: "../images/Blacksun/",
    enabled: true,
    designer: "A | Λռɗɾɇɯ#3026"
  },
  {
-   name: "Prolus",
+   name: "prolus",
    location: "../images/Prolus/",
    enabled: true,
    designer: "A | Λռɗɾɇɯ#3026"
