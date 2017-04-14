@@ -35,8 +35,8 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "enable",
-  description: "Enable a design",
+  name: "disable",
+  description: "Disable a design",
   usage: "",
   usageDelim: "",
 };
