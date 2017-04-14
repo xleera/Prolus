@@ -1,0 +1,4 @@
+{
+"d_token" : "<insert discord.js token in here.",
+"administrators" : ["Array with user ids goes here."]
+}

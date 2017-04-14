@@ -1,14 +1,19 @@
 exports.run = (client, msg) => {
-    var images = require('../images.js');
+    var images = require('../images.json');
     var isAlphanumeric = require('is-alphanumeric');
     var fs = require('fs')
     var exports = module.exports = {}
     var enabled = []
-    images.list.forEach(function(x) {
-        if (x.enabled == true) {
-            enabled.push(x)
-        }
-    })
+    var keys = Object.keys(images)
+    if (keys.length == 0){
+      msg.reply("No designs have been added yet.")
+      return
+    }
+    for (i = 0; i < keys.length; i++){
+      if (images[keys[i]].enabled == true){
+        enabled.push({name: images[keys[i]].name, designer: images[keys[i]].designer})
+      }
+    }
     if (enabled == undefined || enabled.length == 0) {
         msg.reply("No designs are enabled.")
     } else {
