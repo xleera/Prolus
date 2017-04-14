@@ -20,7 +20,7 @@ msg.channel.sendMessage("No design found by that name")
 msg.channel.sendMessage("This design is already enabled.")
 }else{
 images[inp.slice(1).join(" ")].enabled = true
-msg.channel.sendMessage("Design **" + inp.slice(1).join(" ") + "Has been enabled.")
+msg.channel.sendMessage("Design **" + inp.slice(1).join(" ") + "** has been enabled.")
 }
 }
 };
