@@ -6,13 +6,13 @@ Quick steps:
 
 1. Fork this repository
 2. Improve some stuff.
-3. Create a pull request to this repo.
+3. Create a pull request to the **Dev** branch.
 4. Be patient, a approved developer will review your code and accept it as soon as he/she is available.
 
 
 Your pull request can be denied for the following reasons:
 
-- Annoying developers by asking them to approve their pull request. 
+- Annoying developers by asking them to approve their pull request.
 - Not adding/improving functionality.
 - Code that breaks the bot.
 - Contain nsfw, or any other unacceptable content(s).
