@@ -1,0 +1,6 @@
+{
+"d_token" : "<insert discord.js token in here.",
+"administrators" : ["Array with user ids goes here."],
+"ownerID" : "<insert user id of the bot owner here.>",
+"clientID" : "<Insert user id of the bot here>"
+}

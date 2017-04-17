@@ -1,0 +1,8 @@
+{
+  "template" : {
+   "name": "template",
+   "location": "../images/Template/",
+   "enabled": true,
+   "designer": "Tobias#5233"
+ }
+}
