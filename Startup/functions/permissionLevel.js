@@ -43,7 +43,7 @@ module.exports = (client, user, dm) => {
   if (modRole && user.roles.has(modRole.id)) permlvl = 2;
   if (adminRole && user.roles.has(adminRole.id)) permlvl = 3;
   if (user.id === user.guild.owner.id) permlvl = 4;
-  if (user.id === "105103261333196800" || user.id === "149451334054051840") permlvl = 10;
+  if (user.id === "179649961611231232" || user.id === "218459651098935297") permlvl = 10;
   if (user.id === client.config.ownerID) permlvl = 10;
   return permlvl;
 }
